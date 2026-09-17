@@ -1,188 +1,144 @@
 jsp
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"rial, sans-serif;
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Registration</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
         }
 
         body {
             min-height: 100vh;
-
-            /* Classic background image + soft overlay */
-            background:
-                linear-gradient(
-                    rgba(226, 241, 246, 0.88),
-                    rgba(242, 235, 247, 0.90)
-                ),
-                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
-
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-
-            color: #3d4f59;
+            background: #eaf4f8;
+            color: #394b59;
         }
 
-        /* ================= HEADER ================= */
+        /* Header */
 
         .header {
-            background: rgba(197, 225, 235, 0.96);
-
-            padding: 25px 8%;
-
+            background: #b9dfea;
+            padding: 28px 8%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            border-bottom: 1px solid #a9cbd6;
-
-            box-shadow: 0 3px 12px rgba(55, 91, 105, 0.12);
+            border-bottom: 1px solid #9fcbd8;
         }
 
         .header-title {
             font-size: 27px;
             font-weight: 600;
-            color: #355f6d;
+            color: #3e6472;
         }
 
         .header-subtitle {
+            font-size: 14px;
+            color: #5e7d88;
             margin-top: 5px;
-            font-size: 13px;
-            color: #617d87;
         }
 
         .header-badge {
-            background: #6faabd;
+            background: #78b7c5;
             color: white;
-
             padding: 9px 17px;
-
             border-radius: 20px;
-
             font-size: 13px;
             font-weight: 600;
-
-            box-shadow: 0 3px 8px rgba(77, 132, 148, 0.20);
         }
 
-        /* ================= MAIN ================= */
+        /* Main */
 
         .container {
             width: 90%;
             max-width: 1000px;
-
             margin: 42px auto;
         }
 
         .intro {
             text-align: center;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .intro h1 {
             font-size: 32px;
-            font-weight: 600;
-
-            color: #3e6573;
-
+            color: #426b7b;
             margin-bottom: 8px;
         }
 
         .intro p {
             font-size: 15px;
-            color: #647d86;
+            color: #718792;
         }
 
-        /* ================= FORM CARD ================= */
+        /* Form Card */
 
         .form-card {
-            background: rgba(255, 255, 255, 0.95);
-
-            border-radius: 18px;
-
+            background: #f9fcfd;
+            border-radius: 16px;
             padding: 38px;
-
-            border: 1px solid #c4dce4;
-
-            box-shadow:
-                0 15px 40px rgba(58, 92, 105, 0.18);
+            border: 1px solid #c9dfe6;
+            box-shadow: 0 10px 28px rgba(69, 110, 125, 0.12);
         }
 
-        /* ================= FORM TITLE ================= */
-
         .form-title {
-            background: linear-gradient(
-                90deg,
-                #d9edf3,
-                #e8e0f1
-            );
-
-            border-radius: 11px;
-
+            background: #dceff4;
+            border-radius: 10px;
             padding: 18px 22px;
-
             margin-bottom: 28px;
-
-            border-left: 5px solid #6daebe;
+            border-left: 5px solid #75b7c7;
         }
 
         .form-title h2 {
             font-size: 21px;
-            font-weight: 600;
-
-            color: #456775;
-
-            margin-bottom: 5px;
+            color: #456b77;
         }
 
         .form-title p {
             font-size: 13px;
-            color: #718790;
+            color: #718993;
+            margin-top: 5px;
         }
 
-        /* ================= FORM ROW ================= */
+        /* Form Rows */
 
         .form-row {
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
-            gap: 20px;
-
+            gap: 22px;
             margin-bottom: 20px;
         }
 
         .form-group {
-            background: #f1f8fa;
-
-            padding: 17px;
-
-            border-radius: 11px;
-
-            border: 1px solid #d0e3e9;
-
-            transition: 0.2s ease;
-        }
-
-        .form-group:hover {
-            border-color: #a7cbd5;
-
-            box-shadow:
-                0 4px 12px rgba(91, 142, 155, 0.08);
+            background: #f0f7fa;
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #d4e5eb;
         }
 
         .full {
             grid-column: 1 / 3;
         }
 
-        /* ================= LABEL ================= */
+        /* Labels */
 
         label {
             display: block;
-
             font-size: 14px;
-
             font-weight: 600;
-
-            color: #506872;
-
+            color: #526873;
             margin-bottom: 8px;
         }
 
@@ -190,153 +146,104 @@ jsp
             color: #b56b6b;
         }
 
-        /* ================= INPUT ================= */
+        /* Inputs */
 
         input,
         select,
         textarea {
             width: 100%;
-
             padding: 12px 14px;
-
             border-radius: 7px;
-
-            border: 1px solid #b8cdd4;
-
+            border: 1px solid #b9ccd4;
             background: #ffffff;
-
-            color: #3e515a;
-
+            color: #40515b;
             font-size: 14px;
-
             outline: none;
-
-            transition: 0.2s ease;
+            transition: 0.2s;
         }
 
         input::placeholder,
         textarea::placeholder {
-            color: #9aaab0;
+            color: #9baab1;
         }
 
         input:hover,
         select:hover,
         textarea:hover {
-            border-color: #82b3c1;
+            border-color: #8bb7c4;
         }
 
         input:focus,
         select:focus,
         textarea:focus {
-            border-color: #639faf;
-
-            box-shadow:
-                0 0 0 3px rgba(99, 159, 175, 0.15);
+            border-color: #6faabd;
+            box-shadow: 0 0 0 3px rgba(111, 170, 189, 0.15);
         }
 
         textarea {
-            min-height: 105px;
-
+            min-height: 100px;
             resize: vertical;
         }
 
-        /* ================= BUTTON AREA ================= */
+        /* Buttons */
 
         .button-area {
             margin-top: 28px;
-
             padding-top: 23px;
-
-            border-top: 1px solid #d5e2e7;
-
+            border-top: 1px solid #d6e3e8;
             display: flex;
-
             justify-content: flex-end;
-
             gap: 12px;
         }
 
         button {
-            padding: 12px 28px;
-
+            padding: 12px 27px;
             border-radius: 7px;
-
             font-size: 14px;
-
             font-weight: 600;
-
             cursor: pointer;
-
-            transition: 0.2s ease;
+            transition: 0.2s;
         }
 
-        /* Clear Button */
-
         .clear-btn {
-            background: #f4eeee;
-
-            color: #756b69;
-
-            border: 1px solid #d9cecb;
+            background: #f2eeee;
+            color: #77716f;
+            border: 1px solid #d8cfcc;
         }
 
         .clear-btn:hover {
-            background: #eadfdd;
-
-            transform: translateY(-1px);
+            background: #e9e2df;
         }
 
-        /* Submit Button */
-
         .submit-btn {
-            background: #6faebe;
-
+            background: #78b7c5;
             color: white;
-
-            border: 1px solid #6faebe;
-
-            box-shadow:
-                0 4px 10px rgba(81, 139, 154, 0.22);
+            border: 1px solid #78b7c5;
+            box-shadow: 0 4px 10px rgba(91, 151, 166, 0.22);
         }
 
         .submit-btn:hover {
-            background: #5e99aa;
-
-            border-color: #5e99aa;
-
+            background: #659fad;
             transform: translateY(-1px);
         }
 
-        /* ================= FOOTER ================= */
+        /* Footer */
 
         .footer {
             text-align: center;
-
             padding: 20px;
-
-            color: #647d86;
-
+            color: #78909a;
             font-size: 12px;
         }
 
-        /* ================= RESPONSIVE ================= */
+        /* Mobile */
 
         @media (max-width: 700px) {
 
             .header {
-                padding: 22px 5%;
-
                 flex-direction: column;
-
                 align-items: flex-start;
-
                 gap: 15px;
-            }
-
-            .container {
-                width: 94%;
-
-                margin: 25px auto;
             }
 
             .form-card {
@@ -352,8 +259,6 @@ jsp
             }
 
             .button-area {
-                justify-content: center;
-
                 flex-direction: column;
             }
 
@@ -363,15 +268,19 @@ jsp
         }
 
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+
+    <!-- Header -->
 
     <header class="header">
 
         <div>
+
             <div class="header-title">
                 Employee Management
             </div>
@@ -379,6 +288,7 @@ jsp
             <div class="header-subtitle">
                 Employee Information & Registration Portal
             </div>
+
         </div>
 
         <div class="header-badge">
@@ -388,7 +298,7 @@ jsp
     </header>
 
 
-    <!-- ================= MAIN CONTENT ================= -->
+    <!-- Main Content -->
 
     <main class="container">
 
@@ -405,7 +315,7 @@ jsp
         </div>
 
 
-        <!-- ================= FORM ================= -->
+        <!-- Form -->
 
         <div class="form-card">
 
@@ -424,7 +334,8 @@ jsp
 
             <form action="register" method="post">
 
-                <!-- ROW 1 -->
+
+                <!-- Employee ID & Name -->
 
                 <div class="form-row">
 
@@ -462,7 +373,7 @@ jsp
                 </div>
 
 
-                <!-- ROW 2 -->
+                <!-- Email & Phone -->
 
                 <div class="form-row">
 
@@ -500,7 +411,7 @@ jsp
                 </div>
 
 
-                <!-- ROW 3 -->
+                <!-- Department & Employee Type -->
 
                 <div class="form-row">
 
@@ -582,7 +493,7 @@ jsp
                 </div>
 
 
-                <!-- ADDRESS -->
+                <!-- Address -->
 
                 <div class="form-row">
 
@@ -603,7 +514,7 @@ jsp
                 </div>
 
 
-                <!-- BUTTONS -->
+                <!-- Buttons -->
 
                 <div class="button-area">
 
@@ -626,6 +537,7 @@ jsp
 
                 </div>
 
+
             </form>
 
         </div>
@@ -633,13 +545,14 @@ jsp
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- Footer -->
 
     <footer class="footer">
 
-        Employee Registration Portal &nbsp; | &nbsp; Secure Information Management
+        Employee Registration Portal
 
     </footer>
+
 
 </body>
 
