@@ -15,79 +15,100 @@ pageEncoding="UTF-8"%>
 <style>
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
     min-height: 100vh;
-    background: #edf4fb;
-    color: #374151;
+    background: #eaf4f8;
+    color: #394b59;
 }
 
-/* HEADER */
 
-header {
-    background: linear-gradient(90deg, #c9e5f7, #d9d2f4, #c9eee5);
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 2px solid #b9d3e7;
+/* TOP HEADER */
+
+.header {
+    background: #b9dfea;
+    padding: 28px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #9fcbd8;
 }
 
-header h1 {
-    color: #425b73;
-    font-size: 30px;
+.header-title {
+    font-size: 27px;
     font-weight: 600;
+    color: #3e6472;
 }
 
-header p {
-    color: #60758a;
-    margin-top: 7px;
+.header-subtitle {
     font-size: 14px;
+    color: #5e7d88;
 }
 
 
 /* MAIN */
 
 .container {
-    width: 92%;
-    max-width: 950px;
-    margin: 38px auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 42px auto;
 }
 
 
-/* CARD */
+/* INTRODUCTION */
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    font-size: 32px;
+    color: #426b7b;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    font-size: 15px;
+    color: #718792;
+}
+
+
+/* FORM */
 
 .form-card {
-    background: #ffffff;
-    padding: 38px;
+    background: #f9fcfd;
     border-radius: 16px;
-    border: 1px solid #d2dfeb;
-    box-shadow: 0 8px 25px rgba(80, 110, 140, 0.13);
+    padding: 38px;
+    border: 1px solid #c9dfe6;
+    box-shadow: 0 10px 28px rgba(69, 110, 125, 0.12);
 }
 
 
-/* HEADING */
+/* FORM TITLE */
 
-.form-heading {
-    background: #e1f0fb;
-    padding: 20px 23px;
+.form-title {
+    background: #dceff4;
     border-radius: 10px;
+    padding: 18px 22px;
     margin-bottom: 28px;
-    border-left: 6px solid #74acd0;
+    border-left: 5px solid #75b7c7;
 }
 
-.form-heading h2 {
-    color: #49677f;
-    font-size: 22px;
+.form-title h2 {
+    font-size: 21px;
+    color: #456b77;
 }
 
-.form-heading p {
-    color: #71879a;
-    margin-top: 5px;
+.form-title p {
     font-size: 13px;
+    color: #718993;
+    margin-top: 5px;
 }
 
 
@@ -96,48 +117,18 @@ header p {
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 22px;
     margin-bottom: 20px;
 }
 
 
-/* COLORED BOXES */
+/* FORM GROUP */
 
 .form-group {
+    background: #f0f7fa;
     padding: 18px;
-    border-radius: 11px;
-    display: flex;
-    flex-direction: column;
-}
-
-.blue {
-    background: #e8f5ff;
-    border: 1px solid #b9dcf4;
-}
-
-.purple {
-    background: #f1ebff;
-    border: 1px solid #d6c6f2;
-}
-
-.green {
-    background: #e7f8f1;
-    border: 1px solid #bce5d4;
-}
-
-.peach {
-    background: #fff0e6;
-    border: 1px solid #f0cfb5;
-}
-
-.yellow {
-    background: #fff8df;
-    border: 1px solid #eadb9f;
-}
-
-.pink {
-    background: #ffedf3;
-    border: 1px solid #efc4d2;
+    border-radius: 10px;
+    border: 1px solid #d4e5eb;
 }
 
 .full {
@@ -148,14 +139,15 @@ header p {
 /* LABEL */
 
 label {
-    color: #536273;
+    display: block;
     font-size: 14px;
     font-weight: 600;
+    color: #526873;
     margin-bottom: 8px;
 }
 
 
-/* INPUT */
+/* INPUTS */
 
 input,
 select,
@@ -163,9 +155,9 @@ textarea {
     width: 100%;
     padding: 12px 14px;
     border-radius: 7px;
-    border: 1px solid #b9c8d6;
+    border: 1px solid #b9ccd4;
     background: #ffffff;
-    color: #374151;
+    color: #40515b;
     font-size: 14px;
     outline: none;
     transition: 0.2s;
@@ -173,44 +165,45 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    color: #9aa7b3;
+    color: #9baab1;
 }
 
 input:hover,
 select:hover,
 textarea:hover {
-    border-color: #8faabd;
+    border-color: #8bb7c4;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #6fa4c7;
-    box-shadow: 0 0 0 3px rgba(111, 164, 199, 0.16);
+    border-color: #6faabd;
+    box-shadow: 0 0 0 3px rgba(111, 170, 189, 0.15);
 }
 
 textarea {
-    min-height: 95px;
+    min-height: 100px;
     resize: vertical;
 }
 
 
 /* BUTTON AREA */
 
-.buttons {
+.button-area {
+    margin-top: 28px;
+    padding-top: 23px;
+    border-top: 1px solid #d6e3e8;
+
     display: flex;
     justify-content: flex-end;
     gap: 12px;
-    margin-top: 28px;
-    padding-top: 23px;
-    border-top: 1px solid #dbe3eb;
 }
 
 
 /* BUTTONS */
 
 button {
-    padding: 12px 28px;
+    padding: 12px 27px;
     border-radius: 7px;
     font-size: 14px;
     font-weight: 600;
@@ -219,41 +212,47 @@ button {
 }
 
 .clear-btn {
-    background: #eef1f5;
-    color: #657383;
-    border: 1px solid #cbd4dd;
+    background: #f2eeee;
+    color: #77716f;
+    border: 1px solid #d8cfcc;
 }
 
 .clear-btn:hover {
-    background: #e3e8ee;
+    background: #e9e2df;
 }
 
 .submit-btn {
-    background: #75aecf;
+    background: #78b7c5;
     color: white;
-    border: 1px solid #75aecf;
-    box-shadow: 0 4px 10px rgba(90, 145, 180, 0.22);
+    border: 1px solid #78b7c5;
+    box-shadow: 0 4px 10px rgba(91, 151, 166, 0.22);
 }
 
 .submit-btn:hover {
-    background: #629bbd;
+    background: #659fad;
     transform: translateY(-1px);
 }
 
 
 /* FOOTER */
 
-footer {
+.footer {
     text-align: center;
     padding: 20px;
-    color: #788b9d;
+    color: #78909a;
     font-size: 12px;
 }
 
 
-/* MOBILE */
+/* RESPONSIVE */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
+
+    .header {
+        text-align: center;
+        flex-direction: column;
+        gap: 6px;
+    }
 
     .container {
         width: 94%;
@@ -271,7 +270,7 @@ footer {
         grid-column: 1;
     }
 
-    .buttons {
+    .button-area {
         justify-content: center;
     }
 
@@ -283,226 +282,241 @@ footer {
 
 <body>
 
-<header>
+<!-- HEADER -->
 
-```
-<h1>Employee Registration</h1>
+<header class="header">
 
-<p>
-    Please enter the required employee information
-</p>
-```
+<div class="header-title">
+    Employee Portal
+</div>
+
+<div class="header-subtitle">
+    Registration
+</div>
 
 </header>
 
+<!-- MAIN -->
+
 <div class="container">
+
+<!-- INTRO -->
+
+<div class="intro">
+
+    <h1>Employee Registration</h1>
+
+    <p>
+        Enter the employee details below to complete registration
+    </p>
+
+</div>
+
+
+<!-- FORM CARD -->
 
 <div class="form-card">
 
-<div class="form-heading">
 
-```
-<h2>Employee Details</h2>
+    <div class="form-title">
 
-<p>
-    Complete the form below to register an employee.
-</p>
-```
+        <h2>Employee Information</h2>
 
-</div>
+        <p>
+            Please provide accurate information in all required fields.
+        </p>
 
-<form action="register" method="post">
-
-<!-- EMPLOYEE ID + NAME -->
-
-<div class="form-row">
-
-```
-<div class="form-group blue">
-
-    <label for="employeeId">
-        Employee ID
-    </label>
-
-    <input
-        type="text"
-        id="employeeId"
-        name="employeeId"
-        placeholder="Enter employee ID"
-        required>
-
-</div>
+    </div>
 
 
-<div class="form-group purple">
-
-    <label for="name">
-        Full Name
-    </label>
-
-    <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Enter full name"
-        required>
-
-</div>
-```
-
-</div>
-
-<!-- EMAIL + PHONE -->
-
-<div class="form-row">
-
-```
-<div class="form-group green">
-
-    <label for="email">
-        Email Address
-    </label>
-
-    <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter email address"
-        required>
-
-</div>
+    <form action="register" method="post">
 
 
-<div class="form-group peach">
+        <!-- ROW 1 -->
 
-    <label for="phone">
-        Phone Number
-    </label>
+        <div class="form-row">
 
-    <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="Enter phone number"
-        required>
+            <div class="form-group">
 
-</div>
-```
+                <label for="employeeId">
+                    Employee ID
+                </label>
 
-</div>
+                <input
+                    type="text"
+                    id="employeeId"
+                    name="employeeId"
+                    placeholder="Enter employee ID"
+                    required>
 
-<!-- DEPARTMENT + TYPE -->
-
-<div class="form-row">
-
-```
-<div class="form-group yellow">
-
-    <label for="department">
-        Department
-    </label>
-
-    <select
-        id="department"
-        name="department"
-        required>
-
-        <option value="">
-            Select department
-        </option>
-
-        <option>IT</option>
-        <option>Human Resources</option>
-        <option>Finance</option>
-        <option>Marketing</option>
-        <option>Operations</option>
-
-    </select>
-
-</div>
+            </div>
 
 
-<div class="form-group pink">
+            <div class="form-group">
 
-    <label for="employeeType">
-        Employee Type
-    </label>
+                <label for="name">
+                    Full Name
+                </label>
 
-    <select
-        id="employeeType"
-        name="employeeType"
-        required>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter full name"
+                    required>
 
-        <option value="">
-            Select employee type
-        </option>
+            </div>
 
-        <option>Full Time</option>
-        <option>Part Time</option>
-        <option>Contract</option>
-        <option>Intern</option>
+        </div>
 
-    </select>
 
-</div>
-```
+        <!-- ROW 2 -->
 
-</div>
+        <div class="form-row">
 
-<!-- ADDRESS -->
+            <div class="form-group">
 
-<div class="form-row">
+                <label for="email">
+                    Email Address
+                </label>
 
-```
-<div class="form-group blue full">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email address"
+                    required>
 
-    <label for="address">
-        Address
-    </label>
+            </div>
 
-    <textarea
-        id="address"
-        name="address"
-        placeholder="Enter employee address"></textarea>
 
-</div>
-```
+            <div class="form-group">
 
-</div>
+                <label for="phone">
+                    Phone Number
+                </label>
 
-<!-- BUTTONS -->
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter phone number"
+                    required>
 
-<div class="buttons">
+            </div>
 
-```
-<button
-    type="reset"
-    class="clear-btn">
-    Clear
-</button>
+        </div>
 
-<button
-    type="submit"
-    class="submit-btn">
-    Register
-</button>
-```
 
-</div>
+        <!-- ROW 3 -->
 
-</form>
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="department">
+                    Department
+                </label>
+
+                <select
+                    id="department"
+                    name="department"
+                    required>
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option>IT</option>
+                    <option>Human Resources</option>
+                    <option>Finance</option>
+                    <option>Marketing</option>
+                    <option>Operations</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="employeeType">
+                    Employee Type
+                </label>
+
+                <select
+                    id="employeeType"
+                    name="employeeType"
+                    required>
+
+                    <option value="">
+                        Select Employee Type
+                    </option>
+
+                    <option>Full Time</option>
+                    <option>Part Time</option>
+                    <option>Contract</option>
+                    <option>Intern</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADDRESS -->
+
+        <div class="form-row">
+
+            <div class="form-group full">
+
+                <label for="address">
+                    Address
+                </label>
+
+                <textarea
+                    id="address"
+                    name="address"
+                    placeholder="Enter employee address"></textarea>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="button-area">
+
+            <button
+                type="reset"
+                class="clear-btn">
+                Clear
+            </button>
+
+            <button
+                type="submit"
+                class="submit-btn">
+                Register Employee
+            </button>
+
+        </div>
+
+
+    </form>
 
 </div>
 
 </div>
 
-<footer>
+<!-- FOOTER -->
 
-```
+<div class="footer">
+
 Employee Registration Portal
-```
 
-</footer>
+</div>
 
 </body>
 
