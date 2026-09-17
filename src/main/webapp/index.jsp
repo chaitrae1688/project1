@@ -21,74 +21,76 @@
         }
 
         body {
-            background: #f4f6f8;
-            color: #333;
             min-height: 100vh;
+            background: #eef2f7;
+            color: #344054;
         }
 
         /* Header */
 
         header {
-            background: #ffffff;
-            border-bottom: 1px solid #dfe3e8;
-            padding: 22px 0;
+            background: #dfe8f3;
+            padding: 28px 20px;
             text-align: center;
+            border-bottom: 1px solid #cbd7e5;
         }
 
         header h1 {
-            color: #34495e;
-            font-size: 28px;
+            color: #354b63;
+            font-size: 29px;
             font-weight: 600;
         }
 
         header p {
-            color: #7f8c8d;
-            margin-top: 6px;
+            color: #65758b;
+            margin-top: 7px;
             font-size: 14px;
         }
 
-        /* Main Container */
+        /* Main */
 
         .container {
             width: 90%;
-            max-width: 850px;
-            margin: 40px auto;
+            max-width: 900px;
+            margin: 38px auto;
         }
 
         /* Form Card */
 
         .form-card {
-            background: #ffffff;
-            border: 1px solid #e1e5e9;
-            border-radius: 8px;
-            padding: 35px 40px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            background: #fdfefe;
+            border-radius: 12px;
+            padding: 38px 42px;
+            border: 1px solid #d5dee8;
+            box-shadow: 0 8px 25px rgba(70, 90, 110, 0.10);
         }
 
         .form-heading {
+            background: #edf1f7;
+            padding: 18px 20px;
+            border-left: 5px solid #7189a3;
+            border-radius: 6px;
             margin-bottom: 28px;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 18px;
         }
 
         .form-heading h2 {
-            color: #34495e;
+            color: #3f536a;
             font-size: 21px;
             font-weight: 600;
         }
 
         .form-heading p {
-            color: #8a939b;
+            color: #718096;
             font-size: 13px;
-            margin-top: 6px;
+            margin-top: 5px;
         }
 
-        /* Form */
+        /* Form Rows */
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 22px;
+            gap: 20px;
             margin-bottom: 20px;
         }
 
@@ -102,42 +104,58 @@
         }
 
         label {
-            color: #4b5563;
+            color: #465568;
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 7px;
         }
 
+        /* Inputs */
+
         input,
         select,
         textarea {
             width: 100%;
-            padding: 11px 13px;
-            border: 1px solid #cfd6dc;
-            border-radius: 5px;
-            background: #fafbfc;
-            color: #333;
+            padding: 12px 14px;
+            border-radius: 6px;
+            border: 1px solid #c8d3df;
+            background: #f6f8fb;
+            color: #344054;
             font-size: 14px;
             outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: 0.2s;
         }
 
         input::placeholder,
         textarea::placeholder {
-            color: #a5adb5;
+            color: #9aa7b5;
         }
 
         input:focus,
         select:focus,
         textarea:focus {
-            border-color: #8aa4b8;
             background: #ffffff;
-            box-shadow: 0 0 0 2px rgba(138, 164, 184, 0.12);
+            border-color: #829bb5;
+            box-shadow: 0 0 0 3px rgba(130, 155, 181, 0.12);
         }
 
         textarea {
-            height: 90px;
+            min-height: 95px;
             resize: vertical;
+        }
+
+        /* Small Color Sections */
+
+        .form-row:nth-of-type(2) .form-group {
+            background: #f3f7fb;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .form-row:nth-of-type(3) .form-group {
+            background: #f8f4f1;
+            padding: 12px;
+            border-radius: 8px;
         }
 
         /* Buttons */
@@ -145,52 +163,57 @@
         .buttons {
             display: flex;
             justify-content: flex-end;
-            gap: 10px;
+            gap: 12px;
             margin-top: 28px;
             padding-top: 22px;
-            border-top: 1px solid #e5e7eb;
+            border-top: 1px solid #dfe5eb;
         }
 
         button {
-            padding: 10px 22px;
-            border-radius: 5px;
+            padding: 11px 25px;
+            border-radius: 6px;
             font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            font-weight: 500;
+            transition: 0.2s;
         }
 
         .clear-btn {
-            background: #ffffff;
-            border: 1px solid #cbd2d8;
-            color: #5f6b75;
+            background: #eeeef2;
+            color: #5f6670;
+            border: 1px solid #d4d7dc;
         }
 
         .clear-btn:hover {
-            background: #f5f6f7;
+            background: #e3e5e9;
         }
 
         .submit-btn {
-            background: #5f7f95;
-            border: 1px solid #5f7f95;
-            color: #ffffff;
+            background: #7189a3;
+            color: white;
+            border: 1px solid #7189a3;
         }
 
         .submit-btn:hover {
-            background: #506e82;
+            background: #60788f;
         }
 
         /* Footer */
 
         footer {
             text-align: center;
-            color: #9aa1a7;
-            font-size: 12px;
             padding: 20px;
+            color: #7b8794;
+            font-size: 12px;
         }
 
         /* Mobile */
 
         @media (max-width: 650px) {
+
+            .container {
+                width: 94%;
+            }
 
             .form-card {
                 padding: 25px 20px;
@@ -217,11 +240,14 @@
 
 <body>
 
+
     <header>
 
         <h1>Employee Registration</h1>
 
-        <p>Please enter the required employee information</p>
+        <p>
+            Please enter the required employee information
+        </p>
 
     </header>
 
@@ -230,11 +256,14 @@
 
         <div class="form-card">
 
+
             <div class="form-heading">
 
                 <h2>Employee Details</h2>
 
-                <p>Complete the form below to register an employee.</p>
+                <p>
+                    Complete the form below to register an employee.
+                </p>
 
             </div>
 
@@ -322,9 +351,15 @@
                             Department
                         </label>
 
-                        <select id="department" name="department" required>
+                        <select
+                            id="department"
+                            name="department"
+                            required>
 
-                            <option value="">Select department</option>
+                            <option value="">
+                                Select department
+                            </option>
+
                             <option>IT</option>
                             <option>Human Resources</option>
                             <option>Finance</option>
@@ -342,9 +377,15 @@
                             Employee Type
                         </label>
 
-                        <select id="employeeType" name="employeeType" required>
+                        <select
+                            id="employeeType"
+                            name="employeeType"
+                            required>
 
-                            <option value="">Select employee type</option>
+                            <option value="">
+                                Select employee type
+                            </option>
+
                             <option>Full Time</option>
                             <option>Part Time</option>
                             <option>Contract</option>
@@ -368,7 +409,8 @@
                         <textarea
                             id="address"
                             name="address"
-                            placeholder="Enter address"></textarea>
+                            placeholder="Enter employee address">
+                        </textarea>
 
                     </div>
 
@@ -401,9 +443,10 @@
 
     <footer>
 
-        © 2026 Employee Registration
+        Employee Registration Portal
 
     </footer>
+
 
 </body>
 
